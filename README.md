@@ -42,7 +42,7 @@ double Calculator::multiply(double a, double b) {
 
 double Calculator::divide(double a, double b) {
     if (b == 0) {
-        throw "Division by zero error";
+        throw std::invalid_argument("Division by zero error");
     }
 
     return a / b;
@@ -55,7 +55,7 @@ The calculator checks whether the divisor is zero before performing division.
 
 ```cpp
 if (b == 0) {
-    throw "Division by zero error";
+    throw std::invalid_argument("Division by zero error");
 }
 ```
 
@@ -64,15 +64,14 @@ This prevents invalid division operations and reports an error.
 ## Project Structure
 
 ```text
-C-Calculator-Project/
+cpp-calculator/
 ├── calculator.cpp
 ├── calculator.h
 ├── main.cpp
 ├── Makefile
+├── .gitignore
 └── README.md
 ```
-
-The exact file names may vary depending on the repository structure.
 
 ## Build Instructions
 
@@ -122,7 +121,6 @@ Then run:
 
 - Add modulus support
 - Add square root and power operations
-- Use standard C++ exception classes
 - Add user input validation
 - Add calculation history
 - Add automated unit tests

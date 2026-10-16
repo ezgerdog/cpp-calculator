@@ -1,0 +1,4 @@
+# Build output
+calculator
+calculator.exe
+*.o
